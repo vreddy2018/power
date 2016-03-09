@@ -8,11 +8,11 @@ def power(originalBase, exponent):
 			exponent = int(exponent)
 			
 		except ValueError:
-			print('sorry not a number try again.')
-
+			print('Sorry not a valid number. Run again.')
+			quit()
 		else: 
 			notconverted = False
-	
+			
 	while count < exponent:
 		base = base * originalBase
 		count += 1
@@ -20,7 +20,7 @@ def power(originalBase, exponent):
 	return base
  
  
-originalBase = raw_input("Base: ")
-exponent = raw_input("Exponent: ")
+originalBase = raw_input("Enter a base (can be decimal or negative): ")
+exponent = raw_input("Enter an exponent (must be an integer): ")
 output = power(originalBase, exponent)
 print(output)
