@@ -26,3 +26,4 @@ exponent = raw_input("Enter an exponent (must be an integer): ")
 
 
 	
+print(power(originalBase, exponent))
