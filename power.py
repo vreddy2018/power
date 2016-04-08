@@ -44,8 +44,15 @@ def int_input(prompt):
 	try:
 		return int(answer)
 	except ValueError:
-		return (int_input("That wasn't a number. Try again."))
+		return (int_input("That wasn't a valid integer number. Try again."))
 	
+def float_input(prompt):
+	answer = raw_input(prompt)
+	
+	try:
+		return float(answer)
+	except ValueError:
+		return (float_input("That wasn't a valid decimal number. Try again."))
 	
 #test cases
 
@@ -59,8 +66,8 @@ print(power_recursive(0, 3))
 #main program
 
 
-userBase = int_input("Tell me a base: ")
-userExponent = int_input("Tell me a Exponent: ")
+userBase = float_input("Tell me a base: ")
+userExponent = int_input("Tell me an exponent: ")
 
 
 print(power_recursive(userBase,userExponent))
